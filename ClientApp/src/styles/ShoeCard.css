@@ -24,6 +24,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    line-height: 20px;
 }
 
 .ShoeNameContainer p{
@@ -31,8 +32,8 @@
 }
 
 .ShoeImageContainer img{
-    width: 350px;
-    height: 230px;
+    width: 200px;
+    height: 110px;
 }
 
 .ShoeDetailsContainer{
@@ -56,4 +57,23 @@
     background-color: #FF5050;
     color: #fff;
     border: none;
+
 }
+
+.ShoeDetailsButtonContainer input{
+    width:120px;
+    font-size: 12px;
+}
+
+.ShowDetailsButtonFavorite {
+    display:flex;
+    flex-direction: row;
+   
+}
+
+.ShowDetailsButtonFavorite input {
+    width:100px;
+    font-size: 12px
+}
+
+

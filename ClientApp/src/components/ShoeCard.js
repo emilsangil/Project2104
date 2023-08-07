@@ -14,8 +14,8 @@ const ShoeCard = ({ isFavorites }) => {
                 <img src="/images/testshoes.png"/>
             </article>
             <article className="ShoeDetailsContainer">
-                <p>JULY 28</p>
-                <article className="ShoeDetailsButtonContainer">
+                <p></p>
+                <article className={isFavorites ? "ShowDetailsButtonFavorite" : "ShoeDetailsButtonContainer"}>
                     <input type="button" value="LEARN MORE" />
                     {isFavorites ? <input type="button" value="REMOVE" id="OrangeButton" /> : null}
                 </article>

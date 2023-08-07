@@ -6,27 +6,30 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
+   
 }
 
 .UpperTextContainer p {
-    font-size: 250px;
+    font-size: 140px;
     text-shadow: 5px -1px 0 red;
 }
 
 .LowerTextContainer p {
-    font-size: 100px;
+    font-size: 80px;
     text-shadow: 5px -1px 0 red;
+    margin-top: -180px
 }
 
-.ImageHBContainer{
-    height: 500px;
+
+.ImageHBContainer {
+    height: 300px;
     height: 500px;
 }
 .ImageHBContainer img{
-    width: 1200px;
-    height: 900px;
+    width: 900px;
+    height: 600px;
     position: relative;
-    bottom: 300px;
+    bottom: 210px;
     right: 100px;
 }
 

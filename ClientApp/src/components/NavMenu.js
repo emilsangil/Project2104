@@ -6,14 +6,14 @@ import "./../styles/NavMenu.css"
 const NavMenu = () => {
     return (
         <nav className="NavContainer">
-            <nav className="ImageContainer1">
+            <nav className="ImgContainer1">
                 <img src="/images/Sneaky1.png"/>
             </nav>
             <nav className="LinkContainer">
-                <Link to="/men">MEN</Link>
-                <Link to="/women">WOMEN</Link>
-                <Link to="/kids">KIDS</Link>
-                <Link to="/all">ALL</Link>
+                <Link to="/">MEN</Link>
+                <Link to="/">WOMEN</Link>
+                <Link to="/">KIDS</Link>
+                <Link to="/search">ALL</Link>
                 <Link to="/favorites">FAVORITES</Link>
             </nav>
             <nav className="ImgContainer2">
