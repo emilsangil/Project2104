@@ -71,7 +71,3 @@
     font-size: 20px;
     width: 100px;
 }
-
-input::placeholder{
-    padding-left: 200px
-}

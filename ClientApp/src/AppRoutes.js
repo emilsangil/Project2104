@@ -6,6 +6,8 @@ import Favorites from "./components/Favorites";
 import Profile from "./components/Profile";
 import Signup from "./components/Signup";
 import Search from "./components/Search";
+import Women from "./components/Womens";
+import Kids from "./components/Kids";
 
 const AppRoutes = [
   {
@@ -31,6 +33,14 @@ const AppRoutes = [
     {
         path: "/profile",
         element: <Profile />
+    },
+    {
+        path: "/women",
+        element: <Women />
+    },
+    {
+        path: "/Kids",
+        element: <Kids />
     },
   {
     path: '/counter',

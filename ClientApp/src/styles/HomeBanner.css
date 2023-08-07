@@ -11,12 +11,12 @@
 
 .UpperTextContainer p {
     font-size: 140px;
-    text-shadow: 5px -1px 0 red;
+    text-shadow: 5px -1px 0 lightgrey;
 }
 
 .LowerTextContainer p {
     font-size: 80px;
-    text-shadow: 5px -1px 0 red;
+    text-shadow: 5px -1px 0 lightgrey;
     margin-top: -180px
 }
 
@@ -26,11 +26,11 @@
     height: 500px;
 }
 .ImageHBContainer img{
-    width: 900px;
+    width: 980px;
     height: 600px;
     position: relative;
     bottom: 210px;
-    right: 100px;
+    right: 50px;
 }
 
 

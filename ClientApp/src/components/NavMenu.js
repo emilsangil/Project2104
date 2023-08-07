@@ -11,8 +11,8 @@ const NavMenu = () => {
             </nav>
             <nav className="LinkContainer">
                 <Link to="/">MEN</Link>
-                <Link to="/">WOMEN</Link>
-                <Link to="/">KIDS</Link>
+                <Link to="/women">WOMEN</Link>
+                <Link to="/Kids">KIDS</Link>
                 <Link to="/search">ALL</Link>
                 <Link to="/favorites">FAVORITES</Link>
             </nav>
