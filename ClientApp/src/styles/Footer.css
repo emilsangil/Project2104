@@ -1,0 +1,35 @@
+﻿body {
+    
+}
+
+.FooterContainer {
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 0;
+    padding-right: 5%;
+    background-color: #303030;
+    color: #fff;
+    height: 130px;
+}
+
+.CopyrightContainer {
+    align-self: center;
+    font-size: 20px;
+    width: 15%;
+}
+
+.NameContainer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    align-self: center;
+    /*border: 2px solid white;*/
+    width: 15%;
+}
+
+.ImageFooterContainer {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width:20%;
+}

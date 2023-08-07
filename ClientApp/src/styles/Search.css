@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.SearchContainer {
+    text-align: center;
+}
+
+.SearchTitle {
+    font-size: 80px;
+}
+
+.SearchContainer .SearchTitle:last-of-type {
+    color: #FF8181;
+}
+
+.SearchInput {
+    width: 600px;
+    height: 65px;
+    border-radius: 30px;
+    border: none;
+    background-image: url(../../public/images/magnifyingglass.png);
+    background-position: 20px center;
+    background-repeat: no-repeat;
+    padding-left: 2.5%;
+}

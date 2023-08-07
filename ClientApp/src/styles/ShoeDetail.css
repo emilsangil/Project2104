@@ -1,0 +1,48 @@
+﻿body {
+}
+
+.ShoeDetailsContainer {
+    display: flex;
+    padding: 0 10%;
+    margin-bottom: 10%;
+}
+.ShoeDetailsNameContainer p{
+    font-size: 140px;
+}
+
+.ShoeDetailsNameContainer:nth-child(1) {
+    text-align: center;
+}
+
+.ShoeDetailsImageContainer {
+    margin: 5% 0;
+    margin: 5% 0;
+}
+
+.ShoeDetailsImageContainer img {
+    width: 900px;
+    height: 485px;
+    transform: rotate(-20deg);
+}
+
+.ShoeDetailsInfoContainer p {
+    font-size: 50px;
+    text-align: center;
+}
+
+.ShoeDetailsButtonContainer {
+    display: flex;
+    gap: 5%;
+    margin-top: 2%;
+}
+
+.ShoeDetailsButtonContainer input{
+    width: 180px;
+}
+
+.ShoeDetailsButtonContainer input:nth-child(2) {
+        background-color: #fff;
+        color: #000;
+}
+
+

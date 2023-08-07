@@ -1,0 +1,33 @@
+﻿body {
+}
+
+.HomebannerContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.UpperTextContainer p {
+    font-size: 250px;
+    text-shadow: 5px -1px 0 red;
+}
+
+.LowerTextContainer p {
+    font-size: 100px;
+    text-shadow: 5px -1px 0 red;
+}
+
+.ImageHBContainer{
+    height: 500px;
+    height: 500px;
+}
+.ImageHBContainer img{
+    width: 1200px;
+    height: 900px;
+    position: relative;
+    bottom: 300px;
+    right: 100px;
+}
+
+

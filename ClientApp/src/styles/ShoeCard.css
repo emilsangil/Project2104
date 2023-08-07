@@ -1,0 +1,59 @@
+﻿body {
+}
+
+.ShoeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 15px;
+    border-radius: 30px;
+    width: auto;
+    background-color: #fff;
+    padding: 1.5%;
+    box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.ShoeContainer:hover {
+    transform: translateY(-20px);
+}
+
+.ShoeNameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.ShoeNameContainer p{
+    font-size: 30px;
+}
+
+.ShoeImageContainer img{
+    width: 350px;
+    height: 230px;
+}
+
+.ShoeDetailsContainer{
+    margin-top: 3%;
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ShoeDetailsContainer input {
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    padding: 3% 5%;
+    font-size: 20px;
+}
+
+#OrangeButton {
+    background-color: #FF5050;
+    color: #fff;
+    border: none;
+}

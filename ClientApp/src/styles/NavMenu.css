@@ -1,0 +1,33 @@
+﻿body {
+
+}
+
+.NavContainer{
+    display: flex;
+    justify-content: space-around;
+    padding: 5% 0;
+}
+
+
+.LinkContainer {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 33%
+}
+
+.LinkContainer a {
+    color: #000;
+    font-size: 30px;
+    text-shadow: 0 5px 4px rgba(0, 0, 0, .5);
+}
+
+
+.ImgContainer1 {
+    align-self: center;
+    width: 33%;
+}
+
+.ImgContainer2 {
+    align-self: center;
+}

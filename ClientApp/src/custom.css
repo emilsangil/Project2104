@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    /*color: #0366d6;*/
+    text-decoration: none;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+body {
+    font-family: 'Quantico', sans-serif;
+    background-color: #F1EFE7;
+}

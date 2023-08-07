@@ -1,0 +1,26 @@
+﻿body {
+}
+
+.ProfileContainer {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 10%;
+}
+
+.ProfileTitle {
+    font-size: 140px;
+    margin-bottom: 3%;
+}
+
+.ProfileContainer img {
+    width: 200px;
+}
+
+.ProfileContainer input {
+    width: 600px;
+    height: 60px;
+    font-size: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+}
