@@ -1,17 +1,17 @@
 import React from "react";
 import "./../styles/HomeBanner.css";
 
-const HomeBanner = () => {
+const HomeBanner = ({imageUrl, ShoeClass, ShoeName}) => {
     return (
         <section className="HomebannerContainer">
             <section className="UpperTextContainer">
-                <p>AIR JORDAN 1</p>
+                <p>{ShoeClass}</p>
             </section>
             <section className="ImageHBContainer">
-                <img src="/images/RetroHighOGChicago1.png"/>
+                <img src={imageUrl} />
             </section>
             <section className="LowerTextContainer">
-                <p>RETRO HIGH OG CHICAGO</p>
+                <p>{ShoeName}</p>
             </section>
         </section>
     )

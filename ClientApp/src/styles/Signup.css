@@ -9,8 +9,8 @@
 }
 
 .SignupImageContainer img{
-    width: 700px;
-    height: 500px;
+    width: 300px;
+    height: 200px;
 }
 
 .SignupInputContainer {
@@ -23,7 +23,7 @@
 .SignupInputContainer input {
     width: 620px;
     height: 80px;
-    border-radius: 30px;
+    border-radius: 20px;
     border: none;
     margin-bottom: 10%;
 }
@@ -34,8 +34,8 @@
 
 .SignupButtonContainer {
     padding: .5% .5%;
-    width: 500px;
-    height: 100px;
+    width: 300px;
+    height: 70px;
     background-color: #000;
     display: flex;
     align-items: center;
@@ -48,11 +48,11 @@
     height: 100%;
     border-radius: 30px;
     border: none;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .SignupInputContainer input:last-of-type {
-    width: 500px;
+    width: 300px;
     align-self: center;
 
 }
@@ -68,6 +68,6 @@
 }
 
 .buttonSign{
-    font-size: 30px;
+    font-size: 20px;
     width: 100px;
 }

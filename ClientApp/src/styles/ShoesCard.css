@@ -2,10 +2,12 @@
 }
 
 .ShoesContainer {
-    margin: 5% 10%;
+    margin: 5% 12%;
     display: flex;
     flex-wrap: wrap;
     gap: 5%;
+   
+
 }
 
 .ShoesContainer > * {

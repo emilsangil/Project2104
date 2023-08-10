@@ -37,8 +37,8 @@ const Home = () => {
 
     return(
         <main className="MainContainer">
-            <HomeBanner />
-            <ShoesCard shoes={ shoes } />
+            <HomeBanner imageUrl="/images/RetroHighOGChicago1.png" ShoeClass="AIR JORDAN 1" ShoeName="Retro High OG Chicago"/>
+            <ShoesCard />
         </main>
     )
 }
