@@ -8,6 +8,7 @@ const ShoeCard = ({ isFavorites, shoe, userId }) => {
 
     const handleLearnMore = () => {
         nav(`/shoedetails/${shoe.id}`, { state: { shoe } });
+        console.log("Learn more")
     }
 
     const handleRemoveToFavorites = async () => {
@@ -32,8 +33,8 @@ const ShoeCard = ({ isFavorites, shoe, userId }) => {
             <article className="ShoeDetailsContainer">
                 <p></p>
                 <article className={isFavorites ? "ShowDetailsButtonFavorite" : "ShoeDetailsButtonContainer"}>
-                    <input type="button" value="LEARN MORE" />
-                    {isFavorites ? <input type="button" value="REMOVE" id="OrangeButton" /> : null}
+                    <input type="button" value="LEARN MORE" onClick={ handleLearnMore } />
+                    {isFavorites ? <input type="button" value="REMOVE" id="OrangeButton" onClick={ handleRemoveToFavorites } /> : null}
                 </article>
             </article>
         </article>

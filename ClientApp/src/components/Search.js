@@ -8,42 +8,71 @@ const Search = () => {
     const nav = useNavigate();
     const [searchValue, setSearchValue] = useState("");
     const [shoes, setShoes] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [allShoes, setAllShoes] = useState([]);
+    //const [isLoading, setIsLoading] = useState(false);
     const [userId, setUserId] = useState(null);
 
-    useEffect(() => {
-        const token = localStorage.getItem("token");
 
-        if (!token) {
-            nav("/signup")
-        } else {
-            setUserId(localStorage.getItem("userId"))
+        useEffect(() => {
+
+            const token = localStorage.getItem("token");
+            if (!token) {
+                nav("/signup");
+            } else {
+                fetchAllShoes();
+            }
+        }, []);
+
+        const fetchAllShoes = async () => {
+            try {
+                const response = await axios.get("/api/shoe/all");
+                console.log("API Response", response)
+                setShoes(response.data);
+                setAllShoes(response.data);
+            } catch (error) {
+                console.log("Failed to fetch all shoes", error);
+            }
         }
-    }, []);
 
     const handleSearch = async () => {
         try {
-            setIsLoading(true);
-            const response = await axios.get(`/api/shoe/search/${searchValue}`);
-            setShoes(response.data);
-            setIsLoading(false);
+            if (searchValue) {
+                const response = await axios.get(`/api/shoe/search/${searchValue}`);
+                console.log(shoes)
+                setShoes(response.data);
+            } else {
+                setShoes(allShoes);
+                console.log(shoes);
+            }
         } catch (error) {
             console.log("Search failed", error);
-            setIsLoading(false);
         }
     }
 
     const handleSearchInputChange = async (e) => {
         setSearchValue(e.target.value);
-        handleSearch();
+        //handleSearch();
     }
+
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            handleSearch();
+        }
+    };
+
+
+    //if (isLoading) {
+    //    return (
+    //        <p>is Loading...</p>
+    //    )
+    //}
 
     return (
         <section className="SearchContainer">
             <p className="SearchTitle">LOOK FOR THE SHOE</p>
             <p className="SearchTitle">THAT FITS YOUR</p>
             <p className="SearchTitle">STYLE</p>
-            <input className="SearchInput" type="search" placeholder="SEARCH" value={searchValue} onChange={handleSearchInputChange} />
+            <input className="SearchInput" type="search" placeholder="SEARCH" value={searchValue} onChange={handleSearchInputChange} onKeyDown={handleKeyPress} />
             <ShoesCard shoes={shoes} userId={ userId } />
         </section>
     )

@@ -20,14 +20,9 @@ const Home = () => {
         }
     }, []);
 
-    const handleClearLocalStorage = () => {
-        localStorage.removeItem("token");
-        localStorage.removeItem("userLoggedIn");
-    };
-
     const fetchAllShoes = async () => {
         try {
-            const response = await axios.get("/api/shoe/all");
+            const response = await axios.get("/api/shoe/category/M");
             console.log("API Response", response)
             setShoes(response.data);
         } catch (error) {
@@ -38,7 +33,7 @@ const Home = () => {
     return(
         <main className="MainContainer">
             <HomeBanner imageUrl="/images/RetroHighOGChicago1.png" ShoeClass="AIR JORDAN 1" ShoeName="Retro High OG Chicago"/>
-            <ShoesCard />
+            <ShoesCard shoes={ shoes } />
         </main>
     )
 }
