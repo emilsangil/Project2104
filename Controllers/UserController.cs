@@ -32,7 +32,7 @@ namespace Project2104.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetUerById(int id)
+        public async Task<IActionResult> GetUserById(int id)
         {
             User user = await _context.Users.FindAsync(id);
 

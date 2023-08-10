@@ -31,7 +31,7 @@ const AppRoutes = [
         element: <Search />
     },
     {
-        path: "/profile",
+        path: "/profile/:id",
         element: <Profile />
     },
     {
