@@ -7,26 +7,25 @@
     margin-bottom: 10%;
 }
 .ShoeDetailsNameContainer p{
-    font-size: 140px;
+    font-size: 90px;
 }
 
 .ShoeDetailsNameContainer:nth-child(1) {
     text-align: center;
 }
 
-.ShoeDetailsImageContainer {
-    margin: 5% 0;
-    margin: 5% 0;
-}
+
 
 .ShoeDetailsImageContainer img {
-    width: 900px;
-    height: 485px;
+    width: 800px;
+    height: 705px;
     transform: rotate(-20deg);
+    margin-top: -220px;
+ 
 }
 
 .ShoeDetailsInfoContainer p {
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
 }
 

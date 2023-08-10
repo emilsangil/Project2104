@@ -21,5 +21,6 @@
     background-image: url(../../public/images/magnifyingglass.png);
     background-position: 20px center;
     background-repeat: no-repeat;
-    padding-left: 2.5%;
+    padding-left: 4%;
+    padding-right: 2%;
 }
