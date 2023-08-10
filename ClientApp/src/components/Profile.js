@@ -36,7 +36,7 @@ const Profile = () => {
             <p>{ user.name }</p>
             <p>{ user.email}</p>
             <p>EXPIRY DATE: UNKNOWN</p>
-            <input type="button" value="SAVE CHANGES" />
+            {/*<input type="button" value="SAVE CHANGES" />*/}
             <input type="button" value="LOGOUT" onClick={ handleLogout} />
         </article>
     )
