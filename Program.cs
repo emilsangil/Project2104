@@ -11,14 +11,35 @@ using Project2104.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var loggerFactory = LoggerFactory.Create(builder =>
+{
+    builder.AddConsole();
+});
+
+var logger = loggerFactory.CreateLogger<Program>();
 // Add services to the container.
 builder.Services.AddControllers();
 
 //builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+using var scope = builder.Services.BuildServiceProvider().CreateScope();
+var services = scope.ServiceProvider;
+
+try
+{
+    var context = services.GetRequiredService<AppDbContext>();
+    context.Database.Migrate();
+}
+catch (Exception ex)
+{
+    logger = services.GetRequiredService<ILogger<Program>>();
+    logger.LogError(ex, "An error occurred while migrating the database.");
+}
+
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+//// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
@@ -34,12 +55,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 // Configure logging
-var loggerFactory = LoggerFactory.Create(builder =>
-{
-    builder.AddConsole(); // Add console logging
-});
 
-var logger = loggerFactory.CreateLogger<Program>();
+
+
 
 // Log a test message
 logger.LogInformation("Logger configured and ready.");
