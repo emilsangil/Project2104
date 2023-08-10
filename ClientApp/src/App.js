@@ -1,13 +1,24 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import Layout from './components/Layout';
 import './custom.css';
 
-export default class App extends Component {
-  static displayName = App.name;
+const App = () => {
 
-  render() {
+    //useEffect(() => {
+    //    window.addEventListener("beforeunload", handleClearLocalStorage);
+
+    //    return () => {
+    //        window.removeEventListener("beforeunload", handleClearLocalStorage);
+    //    };
+    //}, []);
+
+    //const handleClearLocalStorage = () => {
+    //    localStorage.removeItem("token");
+    //    localStorage.removeItem("userLoggedIn");
+    //};
+
     return (
       <Layout>
         <Routes>
@@ -18,5 +29,6 @@ export default class App extends Component {
         </Routes>
       </Layout>
     );
-  }
 }
+
+export default App;

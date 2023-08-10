@@ -29,5 +29,11 @@ namespace Project2104.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet("test")]
+        public IActionResult TestEndpoint()
+        {
+            return Ok("Test API Endpoint");
+        }
     }
 }

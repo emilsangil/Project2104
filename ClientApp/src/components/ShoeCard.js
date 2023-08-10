@@ -1,23 +1,39 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./../styles/ShoeCard.css";
+import axios from "axios";
 
-const ShoeCard = ({ isFavorites }) => {
+const ShoeCard = ({ isFavorites, shoe, userId }) => {
+    const nav = useNavigate();
+
+    const handleLearnMore = () => {
+        nav(`/shoedetails/${shoe.id}`, { state: { shoe } });
+    }
+
+    const handleRemoveToFavorites = async () => {
+        console.log(shoe.id);
+        console.log(userId);
+        try {
+            const response = await axios.delete(`/api/user/${userId}/favorites/${shoe.id}`);
+            console.log("Shoe removed", response.data);
+        } catch (error) {
+            console.log("Error removing shoe", error);
+        }
+    }
 
     return (
         <article className="ShoeContainer">
             <article className="ShoeNameContainer">
-                <p>NIKE</p>
-                <p>AIR</p>
-                <p>FORCE</p>
+                <p>{ shoe.name }</p>
             </article>
             <article className="ShoeImageContainer">
-                <img src="/images/testshoes.png"/>
+                <img src={ shoe.image } />
             </article>
             <article className="ShoeDetailsContainer">
                 <p>JULY 28</p>
                 <article className="ShoeDetailsButtonContainer">
-                    <input type="button" value="LEARN MORE" />
-                    {isFavorites ? <input type="button" value="REMOVE" id="OrangeButton" /> : null}
+                    <input type="button" value="LEARN MORE" onClick={ handleLearnMore } />
+                    {isFavorites ? <input type="button" value="REMOVE" id="OrangeButton" onClick={ handleRemoveToFavorites } />  : null}
                 </article>
             </article>
         </article>

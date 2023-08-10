@@ -13,7 +13,7 @@ const AppRoutes = [
     element: <Home />
     },
   {
-      path: "/shoedetails",
+      path: "/shoedetails/:id",
       element: <ShoeDetails />
     },
     {

@@ -30,4 +30,10 @@
     right: 100px;
 }
 
+.image-3d-container {
+    perspective: 1000px; /* Adjust this value for more/less pronounced 3D effect */
+    width: 200px; /* Adjust the container size as needed */
+    height: 200px; /* Adjust the container size as needed */
+}
+
 
